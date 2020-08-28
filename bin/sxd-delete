@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+const inquirer = require("inquirer")
+const chalk = require("chalk")
+const fs = require("fs")
+const temObj = require(`${__dirname}/../template`)
+const options = {
+    encoding:"utf-8",
+    flag:"w"
+}
+const questionList = [
+    {
+        type:"input",
+        name:"temName",
+        message:"Template you want to delete : ",
+        validate(val){
+            if(val===null || val===''){
+                return "Template name is empty"
+            }else if(!temObj[val]){
+                return "Template doesn't exist!"
+            }else{
+                return true
+            }
+        }
+    },
+]
+inquirer
+.prompt(questionList).then(answers=>{
+    let {temName} = answers;
+    delete temObj[temName]
+    fs.writeFile(`${__dirname}/../template.json`,JSON.stringify(temObj),options,(err)=>{
+        if(err){
+            console.log(err)
+        }
+        console.log(chalk.greenBright('\nDeleted successfully!'))
+        console.log(chalk.yellowBright("now your template list is:"))
+        console.log(temObj)
+    })
+})

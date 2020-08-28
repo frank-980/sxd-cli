@@ -1,0 +1,24 @@
+{
+  "name": "sxd-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "download-git-repo": "^1.1.0",
+    "inquirer": "^6.2.2",
+    "ora": "^3.2.0"
+  },
+  "bin": {
+    "sxd": "bin/sxd",
+    "sxd-add": "bin/sxd-add",
+    "sxd-delete": "bin/sxd-delete",
+    "sxd-list": "bin/sxd-list"
+  },
+  "author": "",
+  "license": "ISC"
+}
