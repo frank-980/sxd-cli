@@ -17,7 +17,8 @@
     "sxd": "bin/sxd",
     "sxd-add": "bin/sxd-add",
     "sxd-delete": "bin/sxd-delete",
-    "sxd-list": "bin/sxd-list"
+    "sxd-list": "bin/sxd-list",
+    "sxd-init": "bin/sxd-init"
   },
   "author": "",
   "license": "ISC"
