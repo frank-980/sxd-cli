@@ -6,7 +6,7 @@ const ora = require('ora')
 const download = require('download-git-repo')
 const tplObj = require(`${__dirname}/../template`)
  
-program
+/*program
  .usage('<template-name> [project-name]')
 program.parse(process.argv)
 // 当没有输入参数的时候给个提示
@@ -47,7 +47,7 @@ download (
  console.log('\n To get started')
  console.log(`\n cd ${projectName} \n`)
  }
-)
-/*download('frank-980/vue-cli_sxd', '/', function (err) {
+)*/
+download('frank-980/vue-cli_sxd', 'sxd-cli', function (err) {
   console.log(err ? 'Error' : 'Success')
-})*/
+})
